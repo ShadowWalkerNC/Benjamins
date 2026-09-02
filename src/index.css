@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-headline: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #121315;
+    color: #e3e2e5;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-headline {
+    font-family: var(--font-headline);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+.amber-glow-button {
+  box-shadow: 0 0 20px rgba(217, 119, 6, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amber-glow-button:hover {
+  box-shadow: 0 0 35px rgba(217, 119, 6, 0.7);
+  transform: translateY(-2px);
+}
+
+.amber-glow-box {
+  box-shadow: 0 0 25px rgba(217, 119, 6, 0.25);
+}
+
+.amber-glow-subtle {
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.15);
+}
+
+.amber-border-glow {
+  border-color: rgba(217, 119, 6, 0.4);
+  box-shadow: 0 0 15px rgba(217, 119, 6, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #121315;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+

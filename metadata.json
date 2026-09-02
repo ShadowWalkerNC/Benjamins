@@ -1,0 +1,6 @@
+{
+  "name": "Benjamin's Pub",
+  "description": "Bangor's favorite neighborhood basement pub since 1973 featuring cold drafts on tap, scratch pub fare, arcade games, pool, and online ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
